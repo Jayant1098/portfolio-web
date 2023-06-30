@@ -5,8 +5,7 @@ module.exports = {
     title: 'Jayant Pahuja',
     description:
       'Jayant Pahuja is a full software engineer who specializes in building exceptional digital experiences.',
-    // TODO: JP TO update this
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+    siteUrl: 'https://jayant.fyi', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
