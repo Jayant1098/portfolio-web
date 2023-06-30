@@ -29,6 +29,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        clarity_project_id: 'hrzey4779q',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
