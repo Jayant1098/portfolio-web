@@ -34,6 +34,14 @@ module.exports = {
         clarity_project_id: 'hrzey4779q',
       },
     },
+    // Vercel Analytics
+    {
+      resolve: '@vercel/gatsby-plugin-vercel-analytics',
+      options: {
+        // (optional) Prints metrics in the console when true
+        debug: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
