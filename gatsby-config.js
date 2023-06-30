@@ -28,6 +28,27 @@ module.exports = {
         icon: 'src/images/logo.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          'G-JNBEQSBR1Y', // Google Analytics / GA
+        ],
+      },
+
+      pluginConfig: {
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        // Defaults to https://www.googletagmanager.com
+        // Delays processing pageview events on route update (in milliseconds)
+        delayOnRouteUpdate: 0,
+      },
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -146,12 +167,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-45666519-2',
       },
     },
   ],
