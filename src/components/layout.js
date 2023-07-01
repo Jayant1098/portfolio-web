@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import { Script } from 'gatsby';
 
 const StyledContent = styled.div`
   display: flex;
@@ -53,6 +54,11 @@ const Layout = ({ children, location }) => {
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="post-hydrate"
+          />
 
           <a className="skip-to-content" href="#content">
             Skip to Content
